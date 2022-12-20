@@ -1,0 +1,25 @@
+<%= form_with model: @product do |form|%>
+<% @product.errors.full_messages.each do |error| %>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <%=error%>
+   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<%end%>
+<div class="mb-3">
+
+<%= form.label :title,class:"form-label"%>
+<%= form.text_field :title,class:"form-control"%>
+</div>
+<div class="mb-3">
+<%= form.label :description,class:"form-label"%>
+<%= form.text_area :description,class:"form-control"%>
+</div>
+<div class="mb-3">
+<%= form.label :price,class:"form-label"%>
+
+<%= form.number_field :price,class:"form-control"%>
+</div>
+<%= form.submit  class:"btn btn-primary" %>
+
+<% end %>
