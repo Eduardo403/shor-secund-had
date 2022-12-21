@@ -1,5 +1,15 @@
+<%=image_tag @product.photo if @product.photo.attached?%>
+
 <h2 class='title'><%=@product.title%></h2>
 <br />
 <p class='description'><%=@product.description%></p>
 <br />
 <span class='price'><%=@product.price%>$</span>
+<br />
+<%= link_to 'Edit Product' ,edit_product_path(@product)%>
+<br />
+<%= link_to 'delete Product' ,product_path(@product),data:{
+turbo_method: :delete,
+turbo_confirm: 'are you sure you want to delete this product?'
+}%>
+

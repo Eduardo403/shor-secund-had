@@ -1,0 +1,11 @@
+<div class="card container" style="width: 25rem;">
+<%=image_tag product.photo ,class:'ard-img-top' if product.photo.attached?%>
+
+
+<%= link_to product_path(product.id),class: 'product' do%>
+<h2 class="card-title"><%=product.title%></h2>
+<% end %>
+<span class="card-text"><%=product.price%>$</span>
+
+</div>
+<br />
