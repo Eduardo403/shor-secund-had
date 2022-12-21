@@ -1,0 +1,8 @@
+es:
+common:
+  confirm: "desea eliminar este producto?"
+products:
+  edit:
+    title: "Editar Producto"
+new:
+  title: "nuevo Producto"

@@ -39,6 +39,11 @@ class ProductsController < ApplicationController
                 status: :see_other
   end
   #helper
+  ## app/controllers/application_controller.rb
+  def default_url_options
+    { locale: I18n.locale }
+  end
+
   def product_params
     params.require(:product).permit(:title, :description, :price, :photo)
   end
